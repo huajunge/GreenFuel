@@ -1,4 +1,4 @@
-package com.example.tr.greenfuel;
+package com.example.tr.greenfuel.junge;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import com.amap.api.maps2d.AMap;
 import com.amap.api.maps2d.CameraUpdateFactory;
 import com.amap.api.maps2d.MapView;
 import com.amap.api.maps2d.model.LatLng;
+import com.example.tr.greenfuel.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     MapView mapView=null;

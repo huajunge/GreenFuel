@@ -1,21 +1,23 @@
-package com.example.tr.greenfuel;
+package com.example.tr.greenfuel.junge;
 
 import android.os.Bundle;
 
 import com.amap.api.navi.AMapNaviView;
 import com.amap.api.navi.enums.NaviType;
+import com.example.tr.greenfuel.R;
 
-public class RouteActivity extends BaseActivity  {
+public class GPSNaviActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_route);
+        setContentView(R.layout.activity_basic_navi);
         mAMapNaviView = (AMapNaviView) findViewById(R.id.navi_view);
         mAMapNaviView.onCreate(savedInstanceState);
         mAMapNaviView.setAMapNaviViewListener(this);
     }
+
     @Override
     public void onInitNaviSuccess() {
         super.onInitNaviSuccess();
@@ -47,5 +49,4 @@ public class RouteActivity extends BaseActivity  {
         super.onCalculateRouteSuccess();
         mAMapNavi.startNavi(NaviType.GPS);
     }
-
 }
